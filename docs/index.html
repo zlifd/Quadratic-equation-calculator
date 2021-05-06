@@ -14,8 +14,19 @@
 			var dis = b*b-4*a*c;
 			var x1 = (-b+Math.sqrt(dis))/(2*a);
 			var x2 = (-b-Math.sqrt(dis))/(2*a);
+			var v1 = -b/(2*a);
+			var v2 = -dis/(4*a);
 			mess1 = "x = " + x1 + " or x = " + x2;
+			mess2 = "Vertex is : (" + v1 + ", " + v2 + ")";
+			mess3 = "It is a open upward curve with minimun value of " + v2;
+			mess4 = "It is a open downward curve with maximun value of " + v2;
 			document.getElementById("here0").innerHTML = mess1 ;
+			document.getElementById("here1").innerHTML = mess2 ;
+			document.getElementById("here2").innerHTML = mess3 ;
+			if (a < 0)
+			{
+				document.getElementById("here2").innerHTML = mess4 ;
+			}
 			if (x1 == x2)
 			{
 				document.getElementById("here0").innerHTML = "x = " +x1;
@@ -48,8 +59,8 @@
 </div>
 <button onclick="Cal();">Calculate</button>
 <div id="here0"></div>
-
-
+<div id="here1"></div>
+<div id="here2"></div>
 
 
 
