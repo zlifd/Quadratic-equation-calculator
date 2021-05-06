@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+<head>
+<h1 id="topp">Quadratic equation calculator</h1>
+
+	
+<script type="text/javascript">
+		function Cal ()
+		{
+			var a = document.getElementById("aa").value;
+			var b = document.getElementById("bb").value;
+			var c = document.getElementById("cc").value;
+			var dis = b*b-4*a*c;
+			var x1 = (-b+Math.sqrt(dis))/(2*a);
+			var x2 = (-b-Math.sqrt(dis))/(2*a);
+			mess1 = "x = " + x1 + " or x = " + x2;
+			document.getElementById("here0").innerHTML = mess1 ;
+			if (x1 == x2)
+			{
+				document.getElementById("here0").innerHTML = "x = " +x1;
+			}
+
+			if (dis < 0)
+			{
+				document.getElementById("here0").innerHTML = "No real solution!";
+			}		
+		}
+</script>
+	
+
+<div>
+	Welcome to Quadratic equation calculator! As the quadratic equation has the form of ax^(2)+bx+c=0, input the values of a, b and c respectively in the following. 
+</div>
+
+
+<div>
+	What is the value of a?
+	<input type="text" id="aa">
+</div>
+<div>
+	What is the value of b?
+	<input type="text" id="bb">
+</div>
+<div>
+	What is the value of c?
+	<input type="text" id="cc">
+</div>
+<button onclick="Cal();">Calculate</button>
+<div id="here0"></div>
+
+
+
+
+
+<style type="text/css">
+    #home {
+    	text-decoration: none;
+    	background-color: #E8F97E;
+    	color: #AC5757;
+    	font-weight: bold;
+    	padding: 10px;
+    	font-size: 20px;
+    }
+
+    body {
+    	background-color: #ECCEF9;
+    }
+
+	h1 {
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 48px;
+	}
+    #home:link{
+    	background-color: yellow;
+    }
+    #home:vitsted{
+    	background-color: #314133;
+    }
+	#home:hover{
+		background-color: pink;
+	}
+	#home:active{
+		background-color: blue;
+	}
+	h3{
+		text-align: right;
+		background-color: #2BD151;
+	}
+
+	
+	
+</style>
+
+
+</head>
+<body>
+
+
+<h2><a href="https://zlifd.github.io/test/" target="_blank" title="back to home page" id="home">HOME</a></h2>
+
+
+<h3>
+<hr>
+ 3-8-2020 &copy; LZ DONG
+</h3>
+</body>
+</html>
